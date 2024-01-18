@@ -1,27 +1,22 @@
 package entities.lunchs;
-
-import entities.Client;
-import entities.Order;
+import entities.Product;
+import enums.Categories;
 import enums.Ingredients;
-
 import java.util.ArrayList;
 
-public class Coffe extends Order {
+
+public class Coffe extends Product {
     private String name;
     private ArrayList<Ingredients> ingredients;
     private Double quantity;
 
-    public Coffe(ArrayList<Ingredients> ingredients, Double quantity, String name) {
-        this.ingredients = ingredients;
-        this.name = name;
-        this.quantity = quantity;
-    }
+    public Coffe() {}
 
-    public Coffe(String name,Client client, Integer id, Double price, Double quantity, ArrayList<Ingredients> ingredients) {
-        super(client, id, price);
+    public Coffe(Double price, Integer id, ArrayList<Categories> categories, String name, ArrayList<Ingredients> ingredients, Double quantity) {
+        super(price, id, categories);
+        this.name = name;
         this.ingredients = ingredients;
         this.quantity = quantity;
-        this.name = name;
     }
 
     public ArrayList<Ingredients> getIngredients() {

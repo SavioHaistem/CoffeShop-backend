@@ -1,15 +1,13 @@
 package entities;
 
-public abstract class Order {
+public class Order {
     private Client client;
     private Integer id;
-    private Double price;
 
     public Order() {}
-    public Order(Client client, Integer id, Double price) {
+    public Order(Client client, Integer id) {
         this.client = client;
         this.id = id;
-        this.price = price;
     }
 
     public Client getClient() {
@@ -22,13 +20,5 @@ public abstract class Order {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Double getPrice() {
-        return price;
     }
 }

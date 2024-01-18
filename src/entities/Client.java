@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Client {
     private String name;
     private Integer id;
+    private ArrayList<Order> orders = new ArrayList<>();
 
     public Client(String name, Integer id) {
         this.name = name;
@@ -25,5 +26,13 @@ public class Client {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public ArrayList<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(ArrayList<Order> orders) {
+        this.orders = orders;
     }
 }
