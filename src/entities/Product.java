@@ -10,10 +10,9 @@ public class Product {
     private ArrayList<Categories> categories = new ArrayList<>();
 
     public Product() {}
-    public Product(Double price, Integer id, ArrayList<Categories> categories) {
+    public Product(Double price, Integer id) {
         this.price = price;
         this.id = id;
-        this.categories = categories;
     }
 
     public Double getPrice() {
@@ -36,7 +35,7 @@ public class Product {
         return categories;
     }
 
-    public void setCategories(ArrayList<Categories> categories) {
-        this.categories = categories;
+    public void addCategorie(Categories categorie) {
+        this.categories.add(categorie);
     }
 }

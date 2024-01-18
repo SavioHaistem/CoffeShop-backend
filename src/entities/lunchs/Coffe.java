@@ -12,10 +12,9 @@ public class Coffe extends Product {
 
     public Coffe() {}
 
-    public Coffe(Double price, Integer id, ArrayList<Categories> categories, String name, ArrayList<Ingredients> ingredients, Double quantity) {
-        super(price, id, categories);
+    public Coffe(Double price, Integer id, String name, Double quantity) {
+        super(price, id);
         this.name = name;
-        this.ingredients = ingredients;
         this.quantity = quantity;
     }
 
@@ -23,8 +22,8 @@ public class Coffe extends Product {
         return ingredients;
     }
 
-    public void setIngredients(ArrayList<Ingredients> ingredients) {
-        this.ingredients = ingredients;
+    public void addIngredients(Ingredients ingredient) {
+        this.ingredients.add(ingredient);
     }
 
     public Double getQuantity() {
